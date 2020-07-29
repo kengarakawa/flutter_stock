@@ -1,6 +1,10 @@
 # flutter_stock
 
-A new Flutter project.
+A test Flutter project.
+
+use ngrok to do the mapping
+ngrok http -host-header=stockflutterapi.site 80
+place the output rrl to lib/utils/constants.dart
 
 ## Getting Started
 
