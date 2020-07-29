@@ -38,9 +38,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
  @override
   void initState() {
     
-    super.initState();
+    
     checkLoginStatus();    
     _title = 'App Name';   
+    print(_title);
+    print(accountName);
+    print(accountEmail);
+
+    super.initState();
   }
 
   checkLoginStatus() async {
@@ -86,7 +91,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: AppBar(
-         title: Text(_title , style: GoogleFonts.itim() ,),
+         title: Text(_title ?? 'App Name?', style: GoogleFonts.itim() ,),
 
          actions: <Widget>[
            FlatButton(
@@ -94,7 +99,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                sharedPreferences.clear();
                Navigator.pushNamed(context, "/login");
              }, 
-             child: Text("ออกจากระบบ" , style: TextStyle(color: Colors.white, fontSize:25.0 ))
+             child: Text("ออกจากระบบ" , style: TextStyle(color: Colors.white, fontSize:18.0 ))
             )
          ],
        ),
@@ -134,7 +139,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 accountEmail: Text(accountEmail),
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage('https://www.vickyalvearshecter.com/wp-content/uploads/2015/02/2012-06-08_0000066-as-Smart-Object-1-600x400.jpg'),
+                    image: AssetImage('assets/images/profile-bg.jpg'), 
+                    // NetworkImage('https://www.vickyalvearshecter.com/wp-content/uploads/2015/02/2012-06-08_0000066-as-Smart-Object-1-600x400.jpg'),
                     fit: BoxFit.fill
                   )
                 ),

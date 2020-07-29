@@ -1,5 +1,6 @@
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_stock/screens/add_product/add_product_screen.dart';
 import 'package:flutter_stock/screens/dashboard/dashoard_screen.dart';
 // import 'package:flutter_stock/screens/home/home_screen.dart';
 import 'package:flutter_stock/screens/login/login_screen.dart';
@@ -21,6 +22,7 @@ final Map <String,WidgetBuilder> routes = <String,WidgetBuilder> {
     "/contact" : (BuildContext context) => LoginScreen() ,
     "/term" : (BuildContext context) => LoginScreen() , 
     "/dashboard" : (BuildContext context) => DashboardScreen() , 
+    "/addproduct" : (BuildContext context) => AddProductScreen()
 
 
 };
